@@ -3,7 +3,7 @@ version: "3.8"
 services:
   zookeeper:
     image: docker.io/bitnami/zookeeper:3.7
-    container_name: fiscalization_zookeeper
+    container_name: kafka-go_zookeeper
     ports:
       - "2181:2181"
     volumes:
@@ -13,7 +13,7 @@ services:
 
   kafka:
     image: "bitnami/kafka:3"
-    container_name: fiscalization_kafka
+    container_name: kafka-go_kafka
     ports:
       - "9093:9093"
     environment:
@@ -34,7 +34,7 @@ services:
 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
-    container_name: fiscalization_kafkaui
+    container_name: kafka-go_kafkaui
     ports:
       - "8888:8080"
     environment:
