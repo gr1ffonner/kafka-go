@@ -11,8 +11,8 @@ func (s *Service) KafkaWrite(
 	ctx context.Context,
 ) error {
 	msg := models.Msg{
-		MessageID: "1",
-		Message:   "test message",
+		MessageID: "228",
+		Message:   "pisya popa",
 	}
 	err := s.producer.SendSimpleMessage(ctx, s.config.Kafka.Topics.TestTopic, msg)
 	if err != nil {

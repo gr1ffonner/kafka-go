@@ -30,7 +30,7 @@ func NewHandler(service *request.Service, validator *httputils.CustomValidator) 
 func (h *Handler) KafkaWrite(r *http.Request) (response *app.HTTPResponse, err error) {
 	err = h.s.KafkaWrite(r.Context())
 	if err != nil {
-		return nil, err
+		return httputils.FinalizeResponse(nil, err)
 	}
 
 	status := Status{"message sended to kafka"}
