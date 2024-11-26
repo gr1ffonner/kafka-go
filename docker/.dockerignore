@@ -1,0 +1,5 @@
+.editorconfig
+.git
+README.md
+vendor/
+.vscode/

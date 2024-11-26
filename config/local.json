@@ -1,0 +1,20 @@
+{
+  "env": "local",
+  "logger": {
+    "level": "debug"
+  },
+  "kafka": {
+    "dsn": "localhost:9093",
+    "consumer_group_id": "consumer_group",
+    "write_timeout_sec": 120,
+    "topics": {
+      "test-topic": "test-topic"
+    },
+    "sasl": {
+      "enabled": false,
+      "cert": "",
+      "user": "",
+      "password": ""
+    }
+  }
+}
